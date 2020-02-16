@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int x,c=0;
+scanf("%d",&x);
+int dc=0,jd=1;
+while(dc<x)
+{
+    dc+=jd;
+    jd+=9;
+    c++;
+}
+printf("%d",c);
+}
