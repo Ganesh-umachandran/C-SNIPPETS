@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int cash,days_count=0,amount_drawn;
+scanf("%d",&cash);
+while(cash>0)
+{
+    amount_drawn=(cash/2>0)?(cash/2):1;
+    while(cash%amount_drawn!=0)
+    {
+        amount_drawn--;
+    }
+    cash-=amount_drawn;
+    days_count++;
+}
+printf("%d",days_count);
+
+}
