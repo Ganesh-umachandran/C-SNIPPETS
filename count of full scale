@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a;
+    int c=0,c1=0;
+    do
+    {
+        scanf("%c",&a);
+        if (a=='T')
+            c++;
+        else if (a=='S')
+            c1++;
+            
+    }
+    while(a!='\r' && a!='\n');
+    printf("%d",c+c1/2);
+
+
+}
