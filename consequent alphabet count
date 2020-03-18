@@ -1,0 +1,26 @@
+input:
+ aaaqqqdddffff
+ouput:
+ a3q3d3f4
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+char s[101];
+scanf("%s",s);
+int index=0,count=0;
+for(index=0;s[index]!='\0';index++)
+{
+        count++;
+        if(s[index]!=s[index+1])
+        {
+            printf("%c%d",s[index],count);
+            count=0;
+        }
+
+}
+
+
+}
