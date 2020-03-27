@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char str[101];
+    scanf("%s",str);
+    int len=strlen(str),index=0;
+    while(index<len)
+    {
+        if (str[index]>='a' && str[index]<='j')
+        {
+            printf("%c",str[index]);
+        }
+        else
+        {
+            printf("*");
+        }
+        index++;
+    }
+    
+
+
+}
