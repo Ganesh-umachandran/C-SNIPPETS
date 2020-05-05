@@ -1,0 +1,32 @@
+input:
+20 35
+
+output:
+20 22 24 26 28 
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int a,b,c=0;
+scanf("%d %d",&a,&b);
+for(int i=a;i<=b;i++)
+{
+    int d=i;
+    while(d>0 && d%2==0)
+    {
+        d/=10;
+    }
+    if(d==0)
+    {
+        printf("%d ",i);
+        c=1;
+    }
+        
+}
+if(c==0)
+    printf("-1");
+
+}
