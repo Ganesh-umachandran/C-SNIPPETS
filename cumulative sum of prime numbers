@@ -1,0 +1,35 @@
+input:
+5
+
+output:
+2 5 10 17 28
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int a,b=2,c=0,d=0;
+scanf("%d",&a);
+while(c<a)
+{
+    int c1=0;
+    for(int i=2;i<=sqrt(b);i++)
+    {
+        if(b%i==0)
+        {
+            c1=1;
+            break;
+        }
+    }
+    if(c1==0)
+    {
+        d+=b;
+        printf("%d ",d);
+        c++;
+    }
+    b++;
+}
+
+}
