@@ -1,0 +1,37 @@
+input:
+5
+1 2 3 4 5
+3 5 4 2 1
+
+output:
+1 2
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int N,c=0;
+scanf("%d",&N);
+int a[N],b[N];
+for(int i=0;i<N;i++)
+{
+    scanf("%d",&a[i]);
+}
+for(int i=0;i<N;i++)
+{
+    scanf("%d",&b[i]);
+}
+for(int i=0;i<N;i++)
+{
+    if(a[i]==b[N-i-1])
+    {
+        printf("%d ",a[i]);
+        c=1;
+    }
+}
+if (c==0)
+    printf("-1");
+
+}
