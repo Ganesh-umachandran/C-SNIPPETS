@@ -1,0 +1,40 @@
+input:
+4
+121
+113411
+12121
+4444
+
+output:
+121
+12121
+4444
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int a,c1=0;
+scanf("%d",&a);
+for(int i=0;i<a;i++)
+{
+    int b,c,d=0;
+    scanf("%d",&b);
+    c=b;
+    while(c>0)
+    {
+        d=(d*10)+(c%10);
+        c/=10;
+    }
+    if (b==d)
+    {
+        printf("%d\n",b);
+        c1++;
+    }
+        
+}
+if (c1==0)
+    printf("-1");
+}
