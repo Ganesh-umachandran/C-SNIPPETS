@@ -1,0 +1,43 @@
+Input:
+10
+8 9 5 12 8 4 21 6 2 12
+8 12
+
+Output:
+2
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+#include<limits.h>
+
+int main()
+{
+    int n,b,c;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d %d",&b,&c);
+    int a1=INT_MAX,a2=INT_MAX,e=n;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]==b)
+            a1=i;
+        else if(a[i]==c)
+            a2=i;
+        else
+            continue;
+        if(a1<n&&a2<n && (abs(a1-a2)+1)<e)
+        {
+            e=abs(a1-a2)+1;
+        }
+            
+    }
+    printf("%d",e);
+    return 0;
+
+
+}
