@@ -1,0 +1,22 @@
+Input:
+hello,good to see you
+
+Output:
+hello, good to see you
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[101];
+    scanf("%[^\n]",a);
+    for(int i=0;a[i]!='\0';i++){
+        printf("%c",a[i]);
+        if(a[i]=='.'||a[i]==','||a[i]=='!'||a[i]=='?')
+            printf(" ");
+    }return 0;
+
+
+}
