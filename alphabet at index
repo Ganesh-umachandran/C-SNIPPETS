@@ -1,0 +1,28 @@
+Input:
+sdjfwuafvbdsjklweuficwbfyr
+
+Output:
+ffbubcsuwdffbdsbwcuvjbduyu
+
+Explanation:
+For the 1st alphabet s, so the 19th alphabet in the string f is printed.
+For the 2nd alphabet d, so the 4th alphabet in the string f is printed.
+For the 3rd alphabet j, so the 10th alphabet in the string b is printed.
+For the 4th alphabet f, so the 6th alphabet in the string u is printed.
+For the 5th alphabet w, so the 23rd alphabet in the string b is printed.
+Similarly, for the remaining alphabets the corresponding alphabets are printed.
+Hence the output is ffbubcsuwdffbdsbwcuvjbduyu
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[101];
+    scanf("%s",a);
+    for(int i=0;a[i]!='\0';i++){
+        printf("%c",a[a[i]-'a']);
+    }return 0;
+
+}
