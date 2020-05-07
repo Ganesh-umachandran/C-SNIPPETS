@@ -1,0 +1,46 @@
+Input:
+banana
+apple
+
+Output:
+banene
+
+Explanation:
+The 1st vowel in S1 is replaced by the 1st vowel in S2.
+Now the string S1 is banana. 
+The 2nd vowel in S1 is replaced by the 2nd vowel in S2.
+Now the string S1 is banena.
+The 3rd vowel in S1 is replaced by the 2nd vowel in S2.
+Now the string S1 is banene. Hence the output is banene
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+char a[101],b[101],c[101];
+scanf("%s %s",a,b);
+int d=0;
+for(int i=0;b[i]!='\0';i++){
+    if(b[i]=='a' || b[i]=='e' || b[i]=='i'||b[i]=='o'||b[i]=='u')
+        c[d++]=b[i];
+}
+int e=d;
+d=0;
+for(int j=0;a[j]!='\0';j++){
+    if(a[j]=='a'||a[j]=='e'||a[j]=='i'||a[j]=='o'||a[j]=='u'){
+        if(e!=0){
+            printf("%c",c[d]);
+            if(d+1!=e)
+                d++;
+        }
+        else
+            printf("a");
+    }
+    else
+        printf("%c",a[j]);
+}
+
+
+}
