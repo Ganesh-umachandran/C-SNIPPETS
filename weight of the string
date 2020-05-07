@@ -1,0 +1,21 @@
+input:
+moon
+
+ouput:
+57
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[101];
+    int i=0,s=0;
+    scanf("%s",a);
+    while(a[i]!='\0'){
+        s+=((tolower(a[i++]))-'a'+1);
+    }
+    printf("%d",s);
+
+}
