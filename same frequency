@@ -1,0 +1,29 @@
+input:
+venom
+
+output:
+YES
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+char a[1001];
+scanf("%s",a);
+int b[26]={0},c;
+for(int i=0;a[i]!='\0';i++){
+    b[a[i]-'a']++;
+}
+c=b[a[0]-'a'];
+for(int i=0;i<26;i++){
+    if(b[i]>0 && c!=b[i]){
+        printf("NO");
+        return 0;
+    }
+}
+printf("YES");
+return 0;
+
+}
