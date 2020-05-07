@@ -1,0 +1,22 @@
+Input:
+WorldWideWeb
+
+Output:
+world wide web
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[101];
+    scanf("%s",a);
+    for(int i=0;a[i]!='\0';i++){
+        printf("%c",tolower(a[i]));
+        if(isupper(a[i+1]))
+            printf(" ");
+    }
+
+
+}
