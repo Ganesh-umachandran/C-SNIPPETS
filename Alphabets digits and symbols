@@ -1,0 +1,29 @@
+Input:
+12Man?Won
+
+Output:
+ManWon12?
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[1001];
+    scanf("%s",a);
+    for(int i=0;a[i]!='\0';i++){
+        if(isalpha(a[i]))
+            printf("%c",a[i]);
+    }
+    for(int i=0;a[i]!='\0';i++){
+        if(isdigit(a[i]))
+            printf("%c",a[i]);
+    }
+    for(int i=0;a[i]!='\0';i++){
+        if(isdigit(a[i])==0 && isalpha(a[i])==0)
+            printf("%c",a[i]);
+    }
+
+
+}
