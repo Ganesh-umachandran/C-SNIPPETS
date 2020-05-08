@@ -1,0 +1,44 @@
+Input:
+elephant
+
+Output:
+lepehant
+
+Explanation:
+The first consonant in elephant is l
+The first vowel in elephant is e
+The second consonant in elephant is p
+The second vowel in elephant is e
+The third consonant in elephant is h
+The third vowel in elephant is a
+The remaining consonants are nt.
+Hence lepehant is printed.
+
+ code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+char a[1001];
+scanf("%s",a);
+int len=strlen(a),p=0,vowels[len],consonants[len],v1=0,c1=0;
+for(int i=0;a[i]!='\0';i++){
+    if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u')
+        vowels[v1++]=a[i];
+    else
+        consonants[c1++]=a[i];
+}
+int consize=c1,vowelsize=v1;
+v1=c1=0;
+while(p<len){
+    if(c1<consize){
+        printf("%c",consonants[c1++]);
+        p++;
+    }
+    if(v1<vowelsize){
+        printf("%c",vowels[v1++]);
+        p++;
+    }
+}return 0;
+}
