@@ -1,0 +1,55 @@
+Input:
+4
+age
+laptop
+history
+great
+
+Output:
+age
+lptp
+hstry
+grt
+
+Explanation:
+In the string "age" the vowels a and e are not present in between consonants,so age is printed.
+In the string "laptop" the vowels a and o are present in between consonants, so lptp is printed.
+In the string "history" the vowels i and o are present in between consonants, so hstry is printed.
+In the string "great" the vowels e and a are present in between consonants, so grt is printed.
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int n,len;
+scanf("%d",&n);
+char a[1001];
+for(int i=0;i<n;i++){
+    scanf("%s",a);
+    len=strlen(a);
+    int i=0,fs=-1,ls=-1;
+    while(i<len &&(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u')){
+        i++;
+    }
+    fs=i;
+    i=len-1;
+    while(i>=0 &&(a[i]=='a'||a[i]=='i'||a[i]=='e'||a[i]=='o'||a[i]=='u')){
+        i--;
+    }
+    ls=i;
+    for(i=0;i<len;i++){
+        if(i>fs && i<ls){
+            if(!(a[i]=='a'||a[i]=='i'||a[i]=='e'||a[i]=='o'||a[i]=='u')){
+                printf("%c",a[i]);
+            }
+        }
+        else{
+            printf("%c",a[i]);
+        }
+    }
+    printf("\n");
+}
+
+}
