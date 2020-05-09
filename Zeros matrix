@@ -1,0 +1,46 @@
+Input:
+3 3
+2 1 1
+1 0 5
+9 1 7
+
+Output:
+2 0 1
+0 0 0
+9 0 7
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c;
+scanf("%d %d",&r,&c);
+int a[r][c],zr[r],zc[c];
+for(int i=0;i<r;i++){
+    zr[i]=0;
+}
+for(int j=0;j<c;j++){
+    zc[j]=0;
+}
+for(int i=0;i<r;i++){
+    for(int j=0;j<c;j++){
+        scanf("%d ",&a[i][j]);
+        if(a[i][j]==0){
+            zr[i]=1;
+            zc[j]=1;
+        }
+    }
+}
+for(int i=0;i<r;i++){
+    for(int j=0;j<c;j++){
+        if(zr[i]==1 ||zc[j]==1)
+            printf("0 ");
+        else
+            printf("%d ",a[i][j]);
+    }
+    printf("\n");
+}
+
+}
