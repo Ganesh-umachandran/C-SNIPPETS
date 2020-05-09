@@ -1,0 +1,34 @@
+Input:
+2 3
+a f h
+n u d
+m o g
+k t s
+
+Output:
+m o h
+n u s
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c;
+scanf("%d %d",&r,&c);
+char  a[r][c],b;
+for(int i=0;i<r;i++){
+    for(int j=0;j<c;j++){
+        scanf(" %c",&a[i][j]);
+    }
+}
+for(int i=0;i<r;i++){
+    for(int j=0;j<c;j++){
+        scanf(" %c",&b);
+        printf("%c ",(b>a[i][j])?b:a[i][j]);
+    }
+    printf("\n");
+}
+
+}
