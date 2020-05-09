@@ -1,0 +1,60 @@
+Input:
+6 5
+a n e i b
+u t r h c
+k s f v p
+k j m r o
+i e o q o
+l g q q x
+
+Output:
+a
+u
+k
+k
+i
+l
+
+Explanation: 
+The 1st column has 3 vowels.
+The 2nd column has 1 vowel.
+The 3rd column has 2 vowels.
+The 4th column has 1 vowel.
+The 5th column has 2 vowels.
+The maximum number of vowels in the 1st column.
+Hence the 1st column is printed.
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int r,c,vc,mvc=0,mvcol=0;
+scanf("%d %d",&r,&c);
+char a[r][c],b,c1[2];
+for(int i=0;i<r;i++){
+    for(int j=0;j<c;j++){
+        scanf("%s",c1);
+        a[i][j]=c1[0];
+    }
+}
+for(int i=0;i<c;i++){
+    vc=0;
+    for(int j=0;j<r;j++){
+        b=a[j][i];
+        if(b=='a'||b=='e'||b=='i'||b=='o'||b=='u'){
+            vc++;
+        }
+    }
+    if(vc>mvc){
+        mvc=vc;
+        mvcol=i;
+    }
+}
+for(int i=0;i<r;i++){
+    printf("%c\n",a[i][mvcol]);
+}
+
+
+}
