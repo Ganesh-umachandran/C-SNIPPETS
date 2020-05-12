@@ -1,0 +1,26 @@
+input:
+2 2004
+
+ouput:
+29 days
+
+code:
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int date,year;
+scanf("%d %d",&date,&year);
+if(date<1||date>12||year<=0)
+    printf("Invalid Month");
+else if((date>=1&&date<=7&&date%2!=0)||(date>=8&&date<=12&&date%2==0))
+    printf("31 days");
+else if(date==2&&year%4==0)
+    printf("29 days");
+else if(date==2)
+    printf("28 days");
+else
+    printf("30 days");
+
+}days in month
