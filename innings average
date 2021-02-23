@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int score1,score2,score1_total=0,score2_total=0,i=0;
+float matches;
+scanf("%f",&matches);
+while(i<matches){
+    scanf("%d %d",&score1,&score2);
+    score1_total+=score1;
+    score2_total+=score2;
+    i++;
+}
+
+printf("%0.2f\n",score1_total/matches);
+printf("%0.2f  ",score2_total/matches);
+
+}
